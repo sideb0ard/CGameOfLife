@@ -42,12 +42,8 @@ int count_neighbors(int y, int x)
 void generate_grid(int g[][GRIDSIZE])
 {
     for (int i = 0; i < GRIDSIZE; i++)
-    {
         for (int j = 0; j < GRIDSIZE; j++)
-        {
             g[i][j] = rand() % 2;
-        }
-    }
 }
 
 int generate_next_generation_grid(int num_rows, int num_cols)
@@ -93,9 +89,8 @@ void print_grid(int g[][GRIDSIZE])
     for (int i = 0; i < GRIDSIZE; i++)
     {
         for (int j = 0; j < GRIDSIZE; j++)
-        {
             printf("%d ", g[i][j]);
-        }
+
         printf("\n");
     }
 }
@@ -117,7 +112,6 @@ void wprint_grid(int g[][GRIDSIZE], int row, int col)
 int main()
 {
     srand(time(NULL));
-
     generate_grid(grid);
 
     //while(true)
@@ -127,7 +121,6 @@ int main()
     //    sleep(1);
     //}
 
-    //char msg[] = "CURSES< DAMN YOU!";
     int row, col;
     initscr();
     cbreak();
